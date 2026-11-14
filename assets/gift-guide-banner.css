@@ -180,7 +180,9 @@
   .gg-banner__content {
     position: absolute;
     z-index: 1;
-    top: 54.5%;            /* heading starts 425px into the 780px banner */
+    bottom: 6.5%;          /* button ends 51px above the bottom of the 780px banner;
+                              anchoring to the bottom lets the text grow upwards
+                              on narrower desktops instead of overflowing */
     left: 4.65vw;          /* 67px */
     width: 33.6vw;         /* 483px */
     padding: 0;
