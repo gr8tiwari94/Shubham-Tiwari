@@ -1,6 +1,7 @@
 /*
  * Gift Guide page template.
  * Two custom sections built from scratch: banner + product grid.
+ * Assign it to a page via Online Store > Pages > Theme template "gift-guide".
  */
 {
   "sections": {
