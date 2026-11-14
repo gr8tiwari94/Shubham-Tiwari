@@ -1,0 +1,40 @@
+/*
+ * Gift Guide page template.
+ * Two custom sections built from scratch: banner + product grid.
+ * Assign it to a page via Online Store > Pages > Theme template "gift-guide".
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "gift-guide-banner",
+      "settings": {
+        "heading": "The Gift Guide",
+        "description": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
+        "button_label": "Shop now",
+        "button_link": "shopify://collections/all",
+        "bar_text": "Sustainable, ethically made clothes in sizes XXS to 6XL",
+        "image": "shopify://shop_images/gift-guide-illustration.png",
+        "image_mobile": "shopify://shop_images/gift-guide-illustration-mobile.png"
+      }
+    },
+    "grid": {
+      "type": "gift-guide-grid",
+      "blocks": {
+        "product-1": { "type": "product", "settings": { "product": "black-leather-bag", "hotspot_x": 62, "hotspot_y": 56 } },
+        "product-2": { "type": "product", "settings": { "product": "blue-silk-tuxedo", "hotspot_x": 85, "hotspot_y": 52 } },
+        "product-3": { "type": "product", "settings": { "product": "chequered-red-shirt", "hotspot_x": 63, "hotspot_y": 21 } },
+        "product-4": { "type": "product", "settings": { "product": "classic-leather-jacket", "hotspot_x": 72, "hotspot_y": 18 } },
+        "product-5": { "type": "product", "settings": { "product": "classic-varsity-top", "hotspot_x": 52, "hotspot_y": 26 } },
+        "product-6": { "type": "product", "settings": { "product": "dark-denim-top", "hotspot_x": 76, "hotspot_y": 39 } }
+      },
+      "block_order": ["product-1", "product-2", "product-3", "product-4", "product-5", "product-6"],
+      "settings": {
+        "heading": "Tisso vison in the wild",
+        "upsell_product": "dark-winter-jacket",
+        "trigger_value_1": "Black",
+        "trigger_value_2": "Medium, M"
+      }
+    }
+  },
+  "order": ["banner", "grid"]
+}
