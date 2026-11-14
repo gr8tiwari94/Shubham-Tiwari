@@ -363,13 +363,11 @@
 .gg-popup__message.is-error { color: #b00020; }
 .gg-popup__message.is-success { color: #1b7f3b; }
 
-/* ---------- Add to cart button (same hover as the banner button) ---------- */
+/* ---------- Add to cart button (same hover as the banner button).
+   Scoped to the popup so it never overrides the banner section. ---------- */
 .gg-popup .gg-btn {
   --gg-btn-bg: var(--gg-accent, #000);
   --gg-btn-text: #fff;
-}
-
-.gg-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -392,7 +390,7 @@
   transition: color 0.4s ease;
 }
 
-.gg-btn::before {
+.gg-popup .gg-btn::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -403,39 +401,39 @@
   transition: transform 0.4s ease;
 }
 
-.gg-btn__icon {
+.gg-popup .gg-btn__icon {
   flex-shrink: 0;
   width: 26px;
   height: auto;
   transition: transform 0.4s ease;
 }
 
-.gg-btn:not(:disabled):hover,
-.gg-btn:not(:disabled):focus-visible {
+.gg-popup .gg-btn:not(:disabled):hover,
+.gg-popup .gg-btn:not(:disabled):focus-visible {
   color: var(--gg-btn-hover-text, #000);
 }
 
-.gg-btn:not(:disabled):hover::before,
-.gg-btn:not(:disabled):focus-visible::before {
+.gg-popup .gg-btn:not(:disabled):hover::before,
+.gg-popup .gg-btn:not(:disabled):focus-visible::before {
   transform: scaleX(1);
 }
 
-.gg-btn:not(:disabled):hover .gg-btn__icon,
-.gg-btn:not(:disabled):focus-visible .gg-btn__icon {
+.gg-popup .gg-btn:not(:disabled):hover .gg-btn__icon,
+.gg-popup .gg-btn:not(:disabled):focus-visible .gg-btn__icon {
   transform: translateX(5px);
 }
 
-.gg-btn:disabled {
+.gg-popup .gg-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.gg-btn.is-loading {
+.gg-popup .gg-btn.is-loading {
   pointer-events: none;
   opacity: 0.7;
 }
 
-.gg-btn--full {
+.gg-popup .gg-btn--full {
   width: 100%;
 }
 
@@ -454,9 +452,9 @@
   .gg-popup__overlay,
   .gg-popup__panel { animation: none; }
   .gg-grid__image,
-  .gg-btn,
-  .gg-btn::before,
-  .gg-btn__icon { transition: none; }
+  .gg-popup .gg-btn,
+  .gg-popup .gg-btn::before,
+  .gg-popup .gg-btn__icon { transition: none; }
 }
 
 /* Lock page scroll while the popup is open */
